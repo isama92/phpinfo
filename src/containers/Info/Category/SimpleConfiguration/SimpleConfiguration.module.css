@@ -1,9 +1,6 @@
 .Container {
     display: flex;
-}
-
-.Container:nth-child(odd) {
-    background-color: #FAFAFA;
+    border-bottom: 1px solid #E8E8E8;
 }
 
 .Container:hover {
@@ -19,8 +16,10 @@
     font-weight: 700;
     text-align: right;
     white-space: nowrap;
+    overflow: auto;
 }
 
 .Value {
     width: 70%;
+    overflow: auto;
 }

@@ -27,7 +27,7 @@ const category = props => {
 
     return (
         <div className={classes.Container}>
-            <div className={classes.Title}>{props.title}</div>
+            <div className={classes.Title}><h2>{props.title}</h2></div>
             {data}
         </div>
     );

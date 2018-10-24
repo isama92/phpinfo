@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import { withRouter } from 'react-router-dom';
 
+import { website_url } from "../../appConfig";
 
 import classes from './Header.module.css';
 
@@ -29,7 +30,7 @@ class Header extends Component {
                         <Icon type="build"/>
                         Extensions
                     </Menu.Item>
-                    <Menu.Item key="website" onClick={() => window.location = window.location.origin}>
+                    <Menu.Item key="website" onClick={() => window.location = website_url}>
                         <Icon type="global"/>
                         Go to Website
                     </Menu.Item>

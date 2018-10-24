@@ -1,3 +1,14 @@
 .Container {
     padding: 3rem 3rem 58px 3rem;
 }
+
+.Search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Search .Input {
+    max-width: 100%;
+    width: 40rem;
+}

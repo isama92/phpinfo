@@ -92,10 +92,16 @@ class Info extends Component {
                     <Breadcrumb.Item><Icon type="home"/></Breadcrumb.Item>
                     <Breadcrumb.Item>Info</Breadcrumb.Item>
                 </Breadcrumb>
-                <Input
-                    placeholder="Search something..."
-                    onChange={e => this.setState({search: e.target.value})}
-                />
+                <div className={classes.Search}>
+                    <div className={classes.Input}>
+                        <Input
+                            placeholder="Search configuration..."
+                            onChange={e => this.setState({search: e.target.value})}
+                            addonBefore={<Icon type="search"/>}
+                            size="large"
+                        />
+                    </div>
+                </div>
                 {data}
             </Layout.Content>
         );
