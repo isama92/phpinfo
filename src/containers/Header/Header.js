@@ -29,7 +29,7 @@ class Header extends Component {
                         <Icon type="build"/>
                         Extensions
                     </Menu.Item>
-                    <Menu.Item key="website" onClick={() => window.location = window.location.host}>
+                    <Menu.Item key="website" onClick={() => window.location = window.location.origin}>
                         <Icon type="global"/>
                         Go to Website
                     </Menu.Item>
