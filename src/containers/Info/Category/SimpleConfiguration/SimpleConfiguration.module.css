@@ -1,0 +1,26 @@
+.Container {
+    display: flex;
+}
+
+.Container:nth-child(odd) {
+    background-color: #FAFAFA;
+}
+
+.Container:hover {
+    background-color: #e6f7ff;
+}
+
+.Container div {
+    padding: 1rem 2rem;
+}
+
+.Name {
+    width: 30%;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.Value {
+    width: 70%;
+}

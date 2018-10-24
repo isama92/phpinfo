@@ -1,0 +1,12 @@
+.Footer {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48px;
+    padding: 0 5rem !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

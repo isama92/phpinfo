@@ -2,10 +2,16 @@
   "name": "phpinfo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://biocreme.shop/info",
   "dependencies": {
+    "antd": "^3.10.2",
+    "axios": "^0.18.0",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.5",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
