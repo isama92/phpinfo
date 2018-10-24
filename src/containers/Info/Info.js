@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import { Layout, Breadcrumb, Icon, Input, BackTop, message } from 'antd';
+import { Layout, Breadcrumb, Icon, Input, BackTop, Alert, Spin } from 'antd';
 
 import Category from './Category/Category';
 
@@ -11,6 +11,7 @@ import classes from './Info.module.css';
 
 class Info extends Component {
     state = {
+        ready: false,
         info: {},
         search: '',
     };
@@ -20,16 +21,17 @@ class Info extends Component {
             info: true,
         })
             .then(res => {
-                if(res.data.success) {
+                if(res.data.success)
                     this.setState({
                         info: res.data.info,
+                        ready: true,
                     });
-                } else
-                    message.error('Unknown error!');
             })
             .catch(err => {
-                message.error('Unknown error!');
                 console.error(err);
+                this.setState({
+                    ready: true,
+                });
             });
     }
 
@@ -84,7 +86,6 @@ class Info extends Component {
         const info = this.getInfoData();
         for(const cat in info)
             data.push(<Category key={cat} title={cat} data={info[cat]}/>)
-
         return (
             <Layout.Content className={classes.Container}>
                 <BackTop />
@@ -102,7 +103,14 @@ class Info extends Component {
                         />
                     </div>
                 </div>
-                {data}
+                { !this.state.ready ? <div className={classes.Spinner}><Spin size="large"/></div> :
+                        Object.keys(info).length === 0 && info.constructor === Object?
+                            <Alert
+                                message="Error"
+                                description="Error while retrieving information from server."
+                                type="error"
+                            />
+                        : data }
             </Layout.Content>
         );
     }

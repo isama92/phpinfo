@@ -2,6 +2,11 @@
     padding: 3rem 3rem 58px 3rem;
 }
 
+.Spinner {
+    padding-top: 3rem;
+    text-align: center;
+}
+
 .Search {
     width: 100%;
     display: flex;
