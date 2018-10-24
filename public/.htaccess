@@ -1,3 +1,7 @@
+# order deny,allow
+# deny from all
+# allow from 127.0.0.1 # YOUR IP
+
 DirectoryIndex index.html
 
 RewriteEngine On
